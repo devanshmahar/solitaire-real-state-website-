@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://devanshmahar.github.io/solitaire-real-state-website-/sitemap.xml
