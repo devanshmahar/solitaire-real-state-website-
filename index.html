@@ -63,7 +63,7 @@
     }
     </script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;400;600&family=Work+Sans:wght@300;400;500&display=swap">
-    <link rel="stylesheet" href="assets/css/main.css?v=13">
+    <link rel="stylesheet" href="assets/css/main.css?v=14">
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
 </head>
 <body class="home">
@@ -95,8 +95,7 @@
 
 <!-- 3D Hero Section -->
 <section class="hero-section">
-    <img class="hero-background" src="assets/hero-animation.gif" alt="" aria-hidden="true">
-    <div id="three-hero-container"></div>
+    <img class="hero-background" src="assets/project-media/solitaire-residency-exterior.jpg" alt="" aria-hidden="true" fetchpriority="high">
     <div class="hero-content">
         <h1 class="hero-title auto-text-reveal">Elevating Lifestyles in Dehradun</h1>
         <p class="hero-subtitle auto-text-reveal">Crafting luxury spaces since 2012</p>
@@ -247,12 +246,13 @@
             <button type="button" class="media-filter active" data-gallery-filter="all" aria-pressed="true">All moments</button>
             <button type="button" class="media-filter" data-gallery-filter="current" aria-pressed="false">Current projects</button>
             <button type="button" class="media-filter" data-gallery-filter="amenities" aria-pressed="false">Amenities</button>
+            <button type="button" class="media-filter" data-gallery-filter="homes" aria-pressed="false">Home interiors</button>
             <button type="button" class="media-filter" data-gallery-filter="completed" aria-pressed="false">Completed projects</button>
         </div>
         <div class="project-media-grid">
-            <button type="button" class="media-card media-card-featured" data-gallery-category="current" data-media-type="image" data-media-src="assets/hero-animation.gif" data-media-caption="Aerial view of the project site">
-                <img src="assets/hero-animation.gif" alt="Aerial view of the project site" loading="lazy">
-                <span class="media-card-caption"><strong>Project in progress</strong><span>Aerial site view</span></span>
+            <button type="button" class="media-card media-card-featured" data-gallery-category="current" data-media-type="image" data-media-src="assets/project-media/solitaire-vista-hero.jpg" data-media-caption="Architectural rendering of The Solitaire Vista">
+                <img src="assets/project-media/solitaire-vista-hero.jpg" alt="Architectural rendering of The Solitaire Vista residential tower" loading="lazy">
+                <span class="media-card-caption"><strong>The Solitaire Vista</strong><span>Architectural rendering</span></span>
                 <span class="media-card-open" aria-hidden="true">View ↗</span>
             </button>
             <button type="button" class="media-card" data-gallery-category="current" data-media-type="image" data-media-src="assets/project-media/solitaire-vista-main.jpg" data-media-caption="The Solitaire Vista">
@@ -310,9 +310,29 @@
                 <span class="media-card-caption"><strong>Resident lobby</strong><span>Everyday convenience</span></span>
                 <span class="media-card-open" aria-hidden="true">View ↗</span>
             </button>
+            <button type="button" class="media-card" data-gallery-category="homes" data-media-type="image" data-media-src="assets/project-media/residential-apartment-living-room.jpg" data-media-caption="Bright apartment living room">
+                <img src="assets/project-media/residential-apartment-living-room.jpg" alt="Bright apartment living room with large windows and polished floors" loading="lazy">
+                <span class="media-card-caption"><strong>Bright living room</strong><span>Apartment interior</span></span>
+                <span class="media-card-open" aria-hidden="true">View ↗</span>
+            </button>
+            <button type="button" class="media-card" data-gallery-category="homes" data-media-type="image" data-media-src="assets/project-media/residential-apartment-kitchen.jpg" data-media-caption="Apartment kitchen with fitted cabinets">
+                <img src="assets/project-media/residential-apartment-kitchen.jpg" alt="Apartment kitchen with fitted cabinets and counter space" loading="lazy">
+                <span class="media-card-caption"><strong>Fitted kitchen</strong><span>Apartment interior</span></span>
+                <span class="media-card-open" aria-hidden="true">View ↗</span>
+            </button>
             <button type="button" class="media-card" data-gallery-category="completed" data-media-type="image" data-media-src="assets/project-media/solitaire-heights-elevation.jpg" data-media-caption="The Solitaire Heights">
                 <img src="assets/project-media/solitaire-heights-elevation.jpg" alt="The Solitaire Heights elevation" loading="lazy">
                 <span class="media-card-caption"><strong>The Solitaire Heights</strong><span>Completed project</span></span>
+                <span class="media-card-open" aria-hidden="true">View ↗</span>
+            </button>
+            <button type="button" class="media-card" data-gallery-category="completed" data-media-type="image" data-media-src="assets/project-media/solitaire-residency-exterior.jpg" data-media-caption="Solitaire Residency exterior">
+                <img src="assets/project-media/solitaire-residency-exterior.jpg" alt="Exterior view of the Solitaire Residency apartment building" loading="lazy">
+                <span class="media-card-caption"><strong>Solitaire Residency</strong><span>Residential exterior</span></span>
+                <span class="media-card-open" aria-hidden="true">View ↗</span>
+            </button>
+            <button type="button" class="media-card" data-gallery-category="completed" data-media-type="image" data-media-src="assets/project-media/solitaire-residency-entrance.jpg" data-media-caption="Entrance to Solitaire Residency">
+                <img src="assets/project-media/solitaire-residency-entrance.jpg" alt="Main entrance sign and facade at Solitaire Residency" loading="lazy">
+                <span class="media-card-caption"><strong>Solitaire Residency entrance</strong><span>Completed community</span></span>
                 <span class="media-card-open" aria-hidden="true">View ↗</span>
             </button>
             <button type="button" class="media-card" data-gallery-category="completed" data-media-type="image" data-media-src="assets/project-media/solitaire-avenue-elevation.jpg" data-media-caption="The Solitaire Avenue">
@@ -442,12 +462,10 @@
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
     // Mock the ajax URL so preview doesn't error out
     window.solitaire_ajax = { ajax_url: '#' };
 </script>
-<script src="assets/js/three-hero.js"></script>
 <script src="assets/js/main.js?v=6"></script>
 </body>
 </html>
