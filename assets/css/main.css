@@ -155,10 +155,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--color-ink);
+}
+
+.site-title img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    flex: 0 0 auto;
 }
 
 .nav-menu {
@@ -1166,6 +1176,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .site-title {
+        gap: 7px;
+        font-size: 1.2rem;
+    }
+    .site-title img {
+        width: 34px;
+        height: 34px;
+    }
     .hero-title { font-size: 2.5rem; }
     .listing-hero { padding: 120px 0 60px; }
     .listing-hero .section-title { font-size: 2.5rem; }
